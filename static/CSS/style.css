@@ -1,0 +1,103 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Generic */
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  background-color: rgb(255, 255, 255);
+  color: #181818;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  width: 600px;
+  height: 60%;
+  padding: 25px;
+  border-radius: 10%;
+  box-shadow: 8px 8px 16px gray, -8px -8px 16px white;
+  background-color: white;
+  transition: 1.25s;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.form__icon {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 30px;
+  margin: 0 5px;
+  opacity: 0.5;
+  transition: 0.15s;
+}
+.form__icon:hover {
+  opacity: 1;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.form__input {
+  width: 350px;
+  height: 40px;
+  margin: 4px 0;
+  padding-left: 25px;
+  font-size: 13px;
+  letter-spacing: 0.15px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f7;
+  transition: 0.25s ease;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 4px #a0a5a8, inset -2px -2px 4px #f1e9e9;
+}
+.form__input:focus {
+  box-shadow: inset 4px 4px 4px rgb(231, 231, 204), inset -4px -4px 4px #f1e9e9;
+}
+.form__span {
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+.form__link {
+  color: #181818;
+  font-size: 15px;
+  margin-top: 25px;
+  border-bottom: 1px solid #a0a5a8;
+  line-height: 2;
+}
+
+.button {
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.15px;
+  background-color: #4B70E2;
+  color: #f1e9e9;
+  box-shadow: 8px 8px 16px rgb(231, 231, 204), -8px -8px 16px #f1e9e9;
+  border: none;
+  outline: none;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/home.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Aarish API</title>
+</head>
+<body>
+    <div class="container-1 a-container" id="a-container">
+        {% if login %}
+        <p>
+        <h1>You are logged in as <i>{{ session['username'] }} !</i> </h1>
+        </p>
+        <br>
+        <p>
+        <h2> Your Access Token is - </h2>
+        <div class="token" id="token-1">
+        {{ token }}
+        </div>
+        <br>
+        <button onclick="copyText" class="button">Copy to clipboard</button>
+        </p> 
+        <br>
+        <p class="logout">
+        <a href={{ url_for('logout') }}>logout</a>
+        </p>
+        {%else%}
+        Please login here {{ session['username'] }} <br />
+        <a href={{ url_for('login') }}>login</a>
+        {%endif %}
+    </div>
+</body>
+</html>
+
+<script>
+function copyText() {
+      
+      /* Copy text into clipboard */
+      navigator.clipboard.writeText
+          (function copyText() {
+      
+            /* Copy text into clipboard */
+            navigator.clipboard.writeText
+                (token);
+        });
+  }
+</script>
